@@ -21,8 +21,8 @@ body {
     height: 100%;
     width: 600px;
     background-color: rgba(37, 83, 137, 0.1);
-    border-top-right-radius: 125px;
-    border-bottom-right-radius: 125px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
