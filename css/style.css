@@ -173,7 +173,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem; /* 15px */
+    margin-bottom: 1rem;
 }
 
 /* Light Theme */
@@ -246,10 +246,10 @@ input {
 
 @media (max-width: 500px) {
     :root {
-        font-size: 8px;
+        font-size: 9px;
     }
     #userInterface {
-        padding: 0;
+        padding: 0 2rem 1rem 2rem;
         margin: 1.5rem; /* 15px */
         justify-content: center;
         align-items: center;
