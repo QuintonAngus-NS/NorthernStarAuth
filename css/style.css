@@ -172,7 +172,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /* Light Styling (Using @Media) */
@@ -232,17 +232,36 @@ input {
     #SGVgraphics {
         display: none;
     }
-}
-
-@media (max-width: 600px) {
     #userInterface {
         background: none;
-        width: 90%;
-        min-width: 400px;
     }
 
     body {
         justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    #userInterface {
+        padding: 0;
+        margin: 15px;
+        justify-content: center;
         align-items: center;
+    }
+
+    #loginHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerSubText {
+        text-align: center;
     }
 }
