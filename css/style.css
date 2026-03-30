@@ -1,11 +1,14 @@
-/* Imports*/
-
+/* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* Univeral Styling (Not Theme Specific) */
+/* Universal Styling */
 
 html, body {
     height: 100%;
+}
+
+:root {
+    font-size: 10px;
 }
 
 body {
@@ -15,15 +18,16 @@ body {
     margin: 0;
     background-color: var(--backgroundColor);
     font-family: 'Montserrat';
+    font-size: 10px;
 }
 
 #userInterface {
     height: 100%;
-    width: 600px;
+    width: 600px; /* stays px */
     background-color: rgba(37, 83, 137, 0.1);
-    border-top-right-radius: 75px;
-    border-bottom-right-radius: 75px;
-    padding-left: 50px;
+    border-top-right-radius: 75px; /* stays px */
+    border-bottom-right-radius: 75px; /* stays px */
+    padding-left: 5rem; /* 50px */
     display: flex;
     flex-direction: column;
 }
@@ -38,33 +42,33 @@ body {
 }
 
 .NorthernStarLogo {
-    height: 50px;
+    height: 50px; /* stays px */
 }
 
 #loginHeader {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 10rem; /* 100px */
+    margin-bottom: 5rem; /* 50px */
 }
 
 .headerDivider {
     width: 75%;
     border-bottom: var(--Primary) solid 1px;
-    margin: 30px 0;
+    margin: 3rem 0;
 }
 
 .headerTitle {
     color: var(--Primary);
-    font-size: 25px;
+    font-size: 2.5rem; /* 25px */
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 1rem; /* 10px */
 }
 
 .headerSubText {
     color: var(--Primary);
-    font-size: 10px;
+    font-size: 1rem; /* 10px */
     font-weight: 300;
     width: 80%;
-    line-height: 20px;
+    line-height: 2rem; /* 20px */
 }
 
 #loginForm {
@@ -78,43 +82,42 @@ body {
 .inputWrapper {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5rem; /* 5px */
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2rem; /* 20px */
 }
 
 .inputHeader {
-    font-size: 10px;
+    font-size: 1rem; /* 10px */
     font-weight: 500;
     color: var(--Primary);
 }
 
 input {
     width: 100%;
-    height: 30px;
+    height: 30px; /* stays px */
     background: none;
     border: 1px var(--Primary) solid;
-    border-radius: 5px;
+    border-radius: 5px; /* stays px */
 }
 
 .btnFilled {
     background-color: var(--BrandBlue);
     width: 100%;
-    height: 30px;
-    border-radius: 5px;
+    height: 30px; /* stays px */
+    border-radius: 5px; /* stays px */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 1.5rem; /* 15px */
     cursor: pointer;
 }
 
 #forgotPassword {
-    font-size: 10px;
+    font-size: 1rem; /* 10px */
     color: #969696;
     display: flex;
-    flex-direction: row;
     justify-content: end;
     align-items: center;
     width: 100%;
@@ -122,10 +125,9 @@ input {
 }
 
 #servicesDividerWrapper {
-    margin: 40px 0;
+    margin: 4rem 0; /* 40px */
     width: 80%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -136,13 +138,13 @@ input {
 }
 
 #signUpLink {
-    font-size: 10px;
-    margin: 10px 0;
+    font-size: 1rem; /* 10px */
+    margin: 1rem 0; /* 10px */
 }
 
 #orText {
     color: var(--Primary);
-    font-size: 15px;
+    font-size: 1.5rem; /* 15px */
     width: 10%;
     display: flex;
     justify-content: center;
@@ -151,39 +153,38 @@ input {
 
 #servicesWrapper {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 80%;
 }
 
 .serviceIcon {
-    width: 25px;
-    height: 25px;
+    width: 25px; /* stays px */
+    height: 25px; /* stays px */
     cursor: pointer;
 }
 
 #copyrightText {
     color: var(--Primary);
-    font-size: 10px;
+    font-size: 1rem; /* 10px */
     font-weight: 300;
     width: 80%;
     margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem; /* 15px */
 }
 
-/* Light Styling (Using @Media) */
+/* Light Theme */
 
 @media (prefers-color-scheme: light) {
-
     :root {
         --backgroundColor: #ffffff;
         --Primary: #141414;
         --BrandBlue: #23447B;
     }
+
     .NorthernStarLogo {
         content: url(../resouces/NorthernStarLogo\(LightDesign\).png);
     }
@@ -201,10 +202,9 @@ input {
     }
 }
 
-/* Dark Styling (Using @Media) */
+/* Dark Theme */
 
 @media (prefers-color-scheme: dark) {
-
     :root {
         --backgroundColor: #141414;
         --Primary: #ffffff;
@@ -228,10 +228,13 @@ input {
     }
 }
 
+/* Responsive */
+
 @media (max-width: 1400px) {
     #SGVgraphics {
         display: none;
     }
+
     #userInterface {
         background: none;
     }
@@ -242,9 +245,12 @@ input {
 }
 
 @media (max-width: 500px) {
+    :root {
+        font-size: 8px;
+    }
     #userInterface {
         padding: 0;
-        margin: 15px;
+        margin: 1.5rem; /* 15px */
         justify-content: center;
         align-items: center;
     }
