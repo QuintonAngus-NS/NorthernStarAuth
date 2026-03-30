@@ -1,0 +1,248 @@
+/* Imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Univeral Styling (Not Theme Specific) */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    background-color: var(--backgroundColor);
+    font-family: 'Montserrat';
+}
+
+#userInterface {
+    height: 100%;
+    width: 600px;
+    background-color: rgba(37, 83, 137, 0.1);
+    border-top-right-radius: 125px;
+    border-bottom-right-radius: 125px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#SGVgraphics {
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-left: auto;
+}
+
+.NorthernStarLogo {
+    height: 50px;
+}
+
+#loginHeader {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.headerDivider {
+    width: 75%;
+    border-bottom: var(--Primary) solid 1px;
+    margin: 30px 0;
+}
+
+.headerTitle {
+    color: var(--Primary);
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.headerSubText {
+    color: var(--Primary);
+    font-size: 10px;
+    font-weight: 300;
+    width: 80%;
+    line-height: 20px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 80%;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputHeader {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--Primary);
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    background: none;
+    border: 1px var(--Primary) solid;
+    border-radius: 5px;
+}
+
+.btnFilled {
+    background-color: var(--BrandBlue);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#forgotPassword {
+    font-size: 10px;
+    color: #969696;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+#servicesDividerWrapper {
+    margin: 40px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesDivider {
+    width: 45%;
+    border-bottom: var(--Primary) solid 1px;
+}
+
+#signUpLink {
+    font-size: 10px;
+    margin: 10px 0;
+}
+
+#orText {
+    color: var(--Primary);
+    font-size: 15px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicesWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.serviceIcon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#copyrightText {
+    color: var(--Primary);
+    font-size: 10px;
+    font-weight: 300;
+    width: 80%;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Light Styling (Using @Media) */
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --backgroundColor: #ffffff;
+        --Primary: #141414;
+        --BrandBlue: #23447B;
+    }
+    .NorthernStarLogo {
+        content: url(../resouces/NorthernStarLogo\(LightDesign\).png);
+    }
+
+    #SGVgraphics {
+        background-image: url(../resouces/SGV\(Light\).svg);
+    }
+
+    #signUpLink {
+        color: var(--BrandBlue);
+    }
+
+    #githubIcon {
+        content: url(../resouces/GithubIconDark.svg);
+    }
+}
+
+/* Dark Styling (Using @Media) */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --backgroundColor: #141414;
+        --Primary: #ffffff;
+        --BrandBlue: #23447B;
+    }
+
+    #SGVgraphics {
+        background-image: url(../resouces/SGV\(Dark\).svg);
+    }
+
+    .NorthernStarLogo {
+        content: url(../resouces/NorthernStarLogo\(DarkDesign\).png);
+    }
+
+    #signUpLink {
+        color: var(--Primary);
+    }
+
+    #githubIcon {
+        content: url(../resouces/GithubIconWhite.svg);
+    }
+}
+
+@media (max-width: 1400px) {
+    #SGVgraphics {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #userInterface {
+        background: none;
+        width: 90%;
+        min-width: 400px;
+    }
+
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+}
